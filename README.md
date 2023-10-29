@@ -28,6 +28,7 @@ Propagate initial conditions provided within `src/data.py`:
     simulation.integrate(1000, 1)
 
 Get cylindrical coordinates for Hydra and classic orbital elements for Charon
+
     hydra = simulation.system.bodies["hydra"]
     r, theta, z = hydra.cylindrical(simulation.system)
 
@@ -35,6 +36,7 @@ Get cylindrical coordinates for Hydra and classic orbital elements for Charon
     charon_elements = charon.elements(simulation.system, simulation.simulation.G)
     
 Perform a FFT on Hydra's semi-major axis
+
     fftfreqs, fft = hydra.fft(simulation, "a")
 
 ## Frequency analysis
